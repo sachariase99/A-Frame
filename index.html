@@ -4,12 +4,19 @@
 <script src="https://jeromeetienne.github.io/AR.js/aframe/build/aframe-ar.js"></script>
 
 <body style='margin : 0px; overflow: hidden;'>
-    <a-scene embedded arjs>
+    <a-scene fog stats embedded arjs>
         <!-- create your content here. just a box for now -->
-        <a-sphere id="sphere1" position="3 0.75 -6" radius="1" color="red"></a-sphere>
-        <a-sphere id="sphere2" position="3 0.75 -6" radius="1" color="blue"></a-sphere>
+
+        <!-- <a-sphere id="sphere1" position="3 0.75 -6" radius="1" color="red"></a-sphere>
+        <a-sphere id="sphere2" position="-3 0.75 -6" radius="1" color="blue"></a-sphere>
         <a-sphere id="sphere3" position="3 0.75 -2" radius="1" color="green"></a-sphere>
         <a-sphere id="sphere4" position="-3 0.75 -2" radius="1" color="violet"></a-sphere>
+        <a-text position="-3 0.75 -4" radius="1" value="Hello, World!"></a-text> -->
+        <a-assets>
+            <a-asset-item id="tree" src="/path/to/tree.gltf"></a-asset-item>
+        </a-assets>
+        <!-- use your gltf model -->
+        <a-entity gltf-model="##tree"></a-entity>
         <!-- define a camera which will move according to the marker position -->
         <a-marker-camera preset='hiro'></a-marker-camera>
     </a-scene>
