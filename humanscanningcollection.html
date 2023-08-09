@@ -14,7 +14,8 @@
             <a-asset-item id="humanscanningcollection" src="humanscanningcollection/humanscanningcollection.gltf"></a-asset-item>
         </a-assets>
         <a-marker preset="hiro">
-                <a-entity gltf-model="#humanscanningcollection" position="0 0.5 0" animation-mixer scale="1 1 1 1"></a-entity>
+                <a-entity gltf-model="#humanscanningcollection" position="0 .5 0" animation-mixer scale="1 1 1"></a-entity>
+                <a-box position='0 0.5 0' material='opacity: 0.5;'></a-box>
         </a-marker>
         <a-entity camera></a-entity>
     </a-scene>
