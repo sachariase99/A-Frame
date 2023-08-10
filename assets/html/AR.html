@@ -12,16 +12,40 @@
 </head>
 
 <body style="margin: 0; overflow: hidden;">
-    <a-scene embedded arjs="detectionMode: mono_and_matrix; matrixCodeType: 3x3;">
+    <a-scene embedded arjs="detectionMode: mono_and_matrix; matrixCodeType: 4x4_BCH_13_5_5;">
         <a-assets>
-            <a-asset-item id="Jannick" src="assets/models/Jannick/Jannick.gltf"></a-asset-item>
-            <a-asset-item id="HC" src="assets/models/HC/HC.gltf"></a-asset-item>
-            <a-asset-item id="Marlene" src="assets/models/Marlene/Marlene.gltf"></a-asset-item>
-            <a-asset-item id="Gunnar" src="assets/models/Gunnar/Gunnar.gltf"></a-asset-item>
+            <a-asset-item id="Jannick" src="../models/Jannick/Jannick.gltf"></a-asset-item>
+            <a-asset-item id="HC" src="../models/HC/HC.gltf"></a-asset-item>
+            <a-asset-item id="Marlene" src="../models/Marlene/Marlene.gltf"></a-asset-item>
+            <a-asset-item id="Gunnar" src="../models/Gunnar/Gunnar.gltf"></a-asset-item>
             <a-asset-item id="optimerBoldFont"
                 src="https://rawgit.com/mrdoob/three.js/dev/examples/fonts/optimer_bold.typeface.json"></a-asset-item>
+            <a-asset-item id="Klasse" src="../models/Klasse/Klasse.gltf"></a-asset-item>
         </a-assets>
-        <a-marker preset="kanji">
+        <!-- BORD Gruppe -->
+        <a-marker type="barcode" value="1">
+            <a-text value="Gunnar" position="-1.3 1.7 -3"></a-text>
+            <a-entity gltf-model="#Gunnar" position="-.9 1.2 -3" animation-mixer scale="0.6 0.6 0.6"></a-entity>
+            <a-text value="Jannick" position="0.7 1.7 -3"></a-text>
+            <a-entity gltf-model="#Jannick" position=".9 2.2 -3" animation-mixer scale="90 90 90"
+                rotation="0 180 0"></a-entity>
+            <a-text value="Marlene" position="-1.2 5.5 -3"></a-text>
+            <a-entity gltf-model="#Marlene" position="-.9 2.7 -6" animation-mixer scale="5 5 5"></a-entity>
+            <a-text value="HC" position="0.44 5.5 -3"></a-text>
+            <a-entity gltf-model="#HC" position=".9 2.7 -6" animation-mixer scale="0.01 0.01 0.01"></a-entity>
+            <a-entity text-geometry="value: Don't be an asshole" position="-0.6 0.5 -1" scale="0.3 0.3 0.3"></a-entity>
+            <a-entity text-geometry="value: Communicate; font: #optimerBoldFont" position="-1 0 -1"
+                scale="0.6 0.6 0.6"></a-entity>
+        </a-marker>
+
+        <!-- DØR Hold -->
+        <a-marker preset="hiro">
+            <a-entity gltf-model="#Klasse" position="0 0.5 0" rotation="315 0 0" animation-mixer scale="0.8 0.8 0.8"></a-entity>
+            <a-entity text-geometry="value: H1we080223" position="-2 1.2 0.2" rotation="315 0 0" scale="1 1 1"></a-entity>
+        </a-marker>
+
+        <!-- DØR Gruppe -->
+        <a-marker type="barcode" value="2">
             <a-text value="Gunnar" position="-1.3 1.7 -3"></a-text>
             <a-entity gltf-model="#Gunnar" position="-.9 1.2 -3" animation-mixer scale="0.6 0.6 0.6"></a-entity>
             <a-text value="Jannick" position="0.7 1.7 -3"></a-text>
