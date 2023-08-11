@@ -21,19 +21,20 @@
             <a-asset-item id="optimerBoldFont"
                 src="https://rawgit.com/mrdoob/three.js/dev/examples/fonts/optimer_bold.typeface.json"></a-asset-item>
             <a-asset-item id="Klasse" src="../models/Klasse/Klasse.gltf"></a-asset-item>
+          <audio id="river" src="../../river.mp3" preload="auto"></audio>
         </a-assets>
         <!-- BORD Gruppe -->
         <a-marker type="barcode" value="1">
-            <a-text value="Gunnar" position="-1.3 1.7 -3"></a-text>
-            <a-entity gltf-model="#Gunnar" position="-.9 1.2 -3" animation-mixer scale="0.6 0.6 0.6"></a-entity>
-            <a-text value="Jannick" position="0.7 1.7 -3"></a-text>
-            <a-entity gltf-model="#Jannick" position=".9 2.2 -3" animation-mixer scale="90 90 90"
+            <a-text value="Gunnar" position="-1.9 1.7 -3" color="#1995c2"></a-text>
+            <a-entity gltf-model="#Gunnar" position="-1.5 1.2 -3" animation-mixer scale="0.6 0.6 0.6"></a-entity>
+            <a-text value="Jannick" position="1.3 1.7 -3" color="#1995c2"></a-text>
+            <a-entity gltf-model="#Jannick" position="1.5 2.2 -3" animation-mixer scale="90 90 90"
                 rotation="0 180 0"></a-entity>
-            <a-text value="Marlene" position="-1.2 5.5 -3"></a-text>
-            <a-entity gltf-model="#Marlene" position="-.9 2.7 -6" animation-mixer scale="5 5 5"></a-entity>
-            <a-text value="HC" position="0.44 5.5 -3"></a-text>
+            <a-text value="Marlene" position="-1.2 5.5 -3" color="#1995c2"></a-text>
+            <a-entity gltf-model="#Marlene" position="-.9 2.6 -6" animation-mixer scale="5 5 5"></a-entity>
+            <a-text value="HC" position="0.44 5.5 -3" color="#1995c2"></a-text>
             <a-entity gltf-model="#HC" position=".9 2.7 -6" animation-mixer scale="0.01 0.01 0.01"></a-entity>
-            <a-entity text-geometry="value: Don't be an asshole" position="-0.6 0.5 -1" scale="0.3 0.3 0.3"></a-entity>
+            <a-entity text-geometry="value: Don't be an Asshat" position="-0.6 0.5 -1" scale="0.3 0.3 0.3"></a-entity>
             <a-entity text-geometry="value: Communicate; font: #optimerBoldFont" position="-1 0 -1"
                 scale="0.6 0.6 0.6"></a-entity>
         </a-marker>
@@ -46,18 +47,21 @@
 
         <!-- DØR Gruppe -->
         <a-marker type="barcode" value="2">
-            <a-text value="Gunnar" position="-1.3 1.7 -3"></a-text>
-            <a-entity gltf-model="#Gunnar" position="-.9 1.2 -3" animation-mixer scale="0.6 0.6 0.6"></a-entity>
+            <a-entity rotation="270 0 0" position="0 0 3">
+          		<a-text value="Gunnar" position="-1.3 1.7 -3"></a-text>
+            <a-entity gltf-model="#Gunnar" position="-.9 1.0 -3" animation-mixer scale="0.6 0.6 0.6"></a-entity>
             <a-text value="Jannick" position="0.7 1.7 -3"></a-text>
-            <a-entity gltf-model="#Jannick" position=".9 2.2 -3" animation-mixer scale="90 90 90"
+            <a-entity gltf-model="#Jannick" position=".9 2.0 -3" animation-mixer scale="90 90 90"
                 rotation="0 180 0"></a-entity>
             <a-text value="Marlene" position="-1.2 5.5 -3"></a-text>
-            <a-entity gltf-model="#Marlene" position="-.9 2.7 -6" animation-mixer scale="5 5 5"></a-entity>
+            <a-entity gltf-model="#Marlene" position="-.9 3.8 -6" animation-mixer scale="5 5 5"></a-entity>
             <a-text value="HC" position="0.44 5.5 -3"></a-text>
-            <a-entity gltf-model="#HC" position=".9 2.7 -6" animation-mixer scale="0.01 0.01 0.01"></a-entity>
-            <a-entity text-geometry="value: Don't be an asshole" position="-0.6 0.5 -1" scale="0.3 0.3 0.3"></a-entity>
-            <a-entity text-geometry="value: Communicate; font: #optimerBoldFont" position="-1 0 -1"
+            <a-entity gltf-model="#HC" position=".9 5 -12" animation-mixer scale="0.01 0.01 0.01"></a-entity>
+            <a-entity text-geometry="value: Hello, we are" position="-0.6 0.5 -1" scale="0.3 0.3 0.3"></a-entity>
+            <a-entity text-geometry="value: The Asshats; font: #optimerBoldFont" position="-1 0 -1"
                 scale="0.6 0.6 0.6"></a-entity>
+          	</a-entity>
+          <a-entity sound="src: #river"></a-entity>
         </a-marker>
         <a-entity camera></a-entity>
     </a-scene>
